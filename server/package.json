@@ -1,0 +1,28 @@
+{
+  "name": "thermal-guard-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "train": "tsx src/forecasting/train.ts",
+    "rehearse": "tsx src/scripts/rehearse.ts",
+    "typecheck": "tsc --noEmit",
+    "ensure-model": "tsx src/forecasting/ensureModel.ts",
+    "rehearse:actions": "tsx src/scripts/rehearseActions.ts"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "socket.io": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}
